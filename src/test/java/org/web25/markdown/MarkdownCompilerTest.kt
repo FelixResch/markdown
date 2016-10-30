@@ -1,4 +1,4 @@
-package io.femo.markdown
+package org.web25.markdown
 
 import org.junit.Assert.*
 import org.junit.Test
@@ -17,5 +17,19 @@ class MarkdownCompilerTest {
         assertEquals("Hello World", document.markdown)
         document.markdown = "Hi World";
         assertNotEquals("Hi World", document.markdown)
+    }
+
+    @Test
+    fun testStringInsert() {
+        val text = "Hello World"
+        val text1 = text.insertAt(5, " lovely")
+        assertEquals("Hello lovely World", text1)
+    }
+
+    @Test
+    fun codePointTest() {
+        val codePoint = 0x20;
+        val block = Character.UnicodeBlock.of(codePoint);
+        println(block);
     }
 }
