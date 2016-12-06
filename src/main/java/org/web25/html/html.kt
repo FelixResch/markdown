@@ -1,4 +1,4 @@
-package org.web25.markdown
+package org.web25.html
 
 /*
 From kotlin koans + extensions

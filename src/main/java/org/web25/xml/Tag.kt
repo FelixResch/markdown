@@ -1,6 +1,7 @@
 package org.web25.xml
 
 import org.web25.Renderable
+import org.web25.indentLines
 import java.util.*
 
 /**

@@ -1,30 +1,12 @@
 package org.web25.markdown
 
-import java.util.*
-
 /**
- * Created by felix on 10/17/16.
+ * Created by felix on 12/6/16.
  */
-abstract class Node(var parent: Node?, val incremental: Boolean = true) {
+open class Node<T>() {
 
-    abstract fun name(): String
-    abstract fun nodeType(): String
-    protected abstract fun renderTags(): Tag
+    var next: Node<T>? = null
+    var previous: Node<T>? = null
 
-    protected val id: UUID
 
-    init {
-        this.id = UUID.randomUUID()
-    }
-
-    fun render(): Tag {
-        val tag = renderTags()
-        if(incremental)
-            tag.set("id", id.toString())
-        return tag
-    }
-
-    fun hasParent(): Boolean {
-        return parent != null;
-    }
 }

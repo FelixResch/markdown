@@ -1,4 +1,4 @@
-package org.web25.markdown
+package org.web25
 
 import java.util.*
 import java.util.function.Consumer
